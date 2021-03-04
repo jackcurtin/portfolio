@@ -2,10 +2,11 @@
 body{
     font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
     font-size: larger;
+    letter-spacing: 2px;
     background-color: black;
-    height: 95vh;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 1.5fr 1fr 20fr .5fr;
+    grid-template-rows: 1fr 1fr 20fr 1fr;
     grid-template-columns: 1fr 4fr 1fr;
 }
 
@@ -58,13 +59,14 @@ nav{
 }
 
 footer{
-    height: 200%;
+    height: 100%;
     grid-row: 4;
     grid-column: 1 / span 3;
     background-color: black;
     color: white;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 #envelope{
@@ -87,10 +89,13 @@ a.projects{
     color: black;
     background-color: lightgreen;
     padding: 10px;
+    flex-wrap: nowrap;
+
 }
 a.projects:hover{
     background-color: lightskyblue;
 }
+
 ul{
     list-style: none;
     display: inline-flex;
@@ -102,10 +107,31 @@ li{
     margin: 0 15px;
 }
 
-.music{
-    align-items: center;
-    margin: 10px;
+#music{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
+#video{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px){
+    body {
+        letter-spacing: 0px;
+    }
+
+    #music{
+        flex-wrap: wrap;
+    }
+
+    #video{
+        justify-content: center;
+        width: 90%;
+    }
+}
 
 
