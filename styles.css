@@ -5,6 +5,12 @@ body{
     grid-template-rows: 1.5fr 1fr 20fr .5fr;
     grid-template-columns: 1fr 4fr 1fr;
 }
+
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+}
+
 header{
     grid-column: 1 / span 3;
     background-color: black;
@@ -25,7 +31,7 @@ main{
 h2{
     display: inline-block;
     padding: 10px;
-    margin: 0px 10px
+    margin: 0 10px
 }
 
 h3{
@@ -65,10 +71,6 @@ footer{
     padding: 12px;
 }
 
-a:link, a:visited{
-    color: white;
-    text-decoration: none;
-}
 a:hover{
     background-color: dimgray;
 }
@@ -78,4 +80,24 @@ a:hover{
 h2:hover{
     background-color: dimgray;
 }
+a.projects{
+    color: black;
+    background-color: lightgreen;
+    padding: 10px;
+}
+a.projects:hover{
+    background-color: lightskyblue;
+}
+ul{
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    margin: 0 15px;
+}
+
+
 
